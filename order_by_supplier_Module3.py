@@ -80,7 +80,6 @@ def chrome_driver(data):
 def orders_by_brk():
     ftp_server = ftplib.FTP(FTP_HOST, FTP_USER, FTP_PASS)
     ftp_server.cwd("orders-by-bkr")
-    ftp_server.cwd("Archiv2")
     All_files_on_FTP = ftp_server.nlst()
     logger.info('Getting requried files from FTP')
     files_needed_today = str(date.today())
